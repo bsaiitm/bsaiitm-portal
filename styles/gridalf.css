@@ -1,0 +1,107 @@
+@font-face {
+  font-family: font2;
+  src: url(/fonts/gir.otf);
+}
+@font-face {
+  font-family: font1;
+  src: url(/fonts/hind.ttf);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: font1;
+  padding: 0px;
+  margin: 0px;
+  font-size: 15px;
+  color: #000a06;
+  text-align: center;
+}
+
+#header {
+  background: #000a06;
+  font-size: 15px;
+  color: #ffffff;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  font-family: font2;
+  text-align: left;
+}
+
+#header>img{
+  height: 13px;
+  width: auto;
+  display: none;
+  margin: 15px;
+}
+
+#menu {
+  display: inline-block;
+  padding: 15px;
+}
+
+#menu>a{
+  color: #ffffff;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+#header>a{
+  color: #009d61;
+  text-decoration: none;
+  display: inline-block;
+  padding: 15px;
+}
+
+#content {
+  padding: 20px;
+  display: inline-block;
+  max-width: 720px;
+  text-align: left;
+}
+
+@media only screen and (max-width: 720px) {
+  #header>img{
+    display: inline-block;
+    margin-top: 18px;
+  }
+  #header>img:hover{
+    cursor: pointer;
+    cursor: hand;
+  }
+  #menu{
+    grid-column: span 2;
+  }
+  #menu>a{
+    display: block;
+    padding: 10px 0px;
+  }
+  #header{
+    position: fixed;
+    top: -180px;
+    width: 100%;
+  }
+  @-webkit-keyframes slidein {
+    from { top: -180px; }
+    to { top: 0px; }
+  }
+  @keyframes slidein {
+    from { top: -180px; }
+    to { top: 0px; }
+  }
+  @-webkit-keyframes slideout {
+    from { top: 0px; }
+    to { top: -180px; }
+  }
+  @keyframes slideout {
+    from { top: 0px; }
+    to { top: -180px; }
+  }
+  #content {
+    padding-top: 45px;
+    display: block;
+    width: 100%;
+  }
+}
