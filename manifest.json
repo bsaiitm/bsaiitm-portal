@@ -3,7 +3,7 @@
   "short_name": "BSA IITM",
   "display": "standalone",
   "start_url": "/",
-  "theme_color": "#4fb43a",
+  "theme_color": "#00060a",
   "background_color": "#00060a",
   "icons": [
     {
