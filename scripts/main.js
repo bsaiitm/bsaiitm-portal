@@ -1,11 +1,13 @@
-let baseurl = 'https://bcc.thekarthik.xyz/'
+let baseurl = 'https://bsaiitmcontent.netlify.com/'
 let url;
-let showmenu = false;
 
 
 function init(){
     url = new URL(window.location.href);
     hash = url.hash.slice(1);
+    if(fullmenu){
+      togglemenu()
+    }
     if(hash==""){
         loadblog('README');
     }
@@ -13,6 +15,9 @@ function init(){
         loadblog(hash);
     }
     window.scrollTo(0,1);
+    navigator.serviceWorker && navigator.serviceWorker.register('./sw.js').then(function(registration) {
+        console.log('Service worker registered with scope: ', registration.scope);
+    });
 }
 
 
@@ -25,6 +30,7 @@ function loadblog(bloghash){
     }).then(function(text) {
         md = new Remarkable('full',{html:true,breaks:true})
         document.getElementById('content').innerHTML = md.render(text)
+
     }).catch(function(error) {
         console.log('Failed to load: ', error.message)
     });

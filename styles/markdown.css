@@ -1,5 +1,21 @@
 h1,h2,h3,h4,h5,h6{
-  color: #009d61;
+  color: #4fb43a;
   font-weight: normal;
   font-family: font2;
+}
+* {
+  word-wrap: break-word;
+}
+h1{
+  text-align: center;
+}
+p {
+  color: #333333;
+}
+a {
+  color: #4fb43a;
+}
+ol,ul{
+  padding: 0px;
+  padding-left: 20px;
 }

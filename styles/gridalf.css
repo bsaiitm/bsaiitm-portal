@@ -22,21 +22,22 @@ body {
 
 #header {
   background: #000a06;
-  font-size: 15px;
+  font-size: 17px;
   color: #ffffff;
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 1fr auto auto auto;
   font-family: font2;
   text-align: left;
 }
 
 #header>img{
-  height: 13px;
+  height: 15px;
   width: auto;
-  display: none;
   margin: 15px;
 }
-
+#header>img.menu{
+  display: none;
+}
 #menu {
   display: inline-block;
   padding: 15px;
@@ -49,7 +50,7 @@ body {
 }
 
 #header>a{
-  color: #009d61;
+  color: #4fb43a;
   text-decoration: none;
   display: inline-block;
   padding: 15px;
@@ -63,7 +64,7 @@ body {
 }
 
 @media only screen and (max-width: 720px) {
-  #header>img{
+  #header>img, #header>img.menu{
     display: inline-block;
     margin-top: 18px;
   }
@@ -72,7 +73,7 @@ body {
     cursor: hand;
   }
   #menu{
-    grid-column: span 2;
+    grid-column: span 4;
   }
   #menu>a{
     display: block;
@@ -80,24 +81,24 @@ body {
   }
   #header{
     position: fixed;
-    top: -180px;
+    top: -310px;
     width: 100%;
   }
   @-webkit-keyframes slidein {
-    from { top: -180px; }
+    from { top: -310px; }
     to { top: 0px; }
   }
   @keyframes slidein {
-    from { top: -180px; }
+    from { top: -310px; }
     to { top: 0px; }
   }
   @-webkit-keyframes slideout {
     from { top: 0px; }
-    to { top: -180px; }
+    to { top: -310px; }
   }
   @keyframes slideout {
     from { top: 0px; }
-    to { top: -180px; }
+    to { top: -310px; }
   }
   #content {
     padding-top: 45px;
